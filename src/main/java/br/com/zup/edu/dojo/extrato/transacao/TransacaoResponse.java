@@ -19,6 +19,9 @@ public class TransacaoResponse {
     @JsonProperty
     private String numeroDaConta;
 
+    @Deprecated
+    public TransacaoResponse(){}
+
     public TransacaoResponse(Transacao transacao) {
         this.operacao = transacao.getOperacao();
         this.valor = transacao.getValor();
