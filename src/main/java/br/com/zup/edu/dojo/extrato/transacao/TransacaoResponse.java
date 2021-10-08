@@ -9,7 +9,7 @@ import java.util.UUID;
 public class TransacaoResponse {
 
     @JsonProperty
-    private TipoOperacao operacao;
+    private TipoTransacao operacao;
     @JsonProperty
     private BigDecimal valor;
     @JsonProperty
@@ -17,17 +17,17 @@ public class TransacaoResponse {
     @JsonProperty
     private UUID idCliente;
     @JsonProperty
-    private String numeroDaConta;
+    private String numeroConta;
 
     @Deprecated
     public TransacaoResponse(){}
 
     public TransacaoResponse(Transacao transacao) {
-        this.operacao = transacao.getOperacao();
+        this.operacao = transacao.getTipoTransacao();
         this.valor = transacao.getValor();
         this.efetuadaEm = transacao.getEfetuadaEm();
         this.idCliente = transacao.getIdCliente();
-        this.numeroDaConta = transacao.getNumeroDaConta();
+        this.numeroConta = transacao.getNumeroConta();
     }
 
 }

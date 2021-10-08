@@ -1,6 +1,5 @@
 package br.com.zup.edu.dojo.extrato.kafka;
 
-import br.com.zup.edu.dojo.extrato.transacao.TransacaoRequest;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;

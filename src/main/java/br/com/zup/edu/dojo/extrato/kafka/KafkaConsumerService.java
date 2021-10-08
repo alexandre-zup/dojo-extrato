@@ -2,7 +2,6 @@ package br.com.zup.edu.dojo.extrato.kafka;
 
 import br.com.zup.edu.dojo.extrato.transacao.Transacao;
 import br.com.zup.edu.dojo.extrato.transacao.TransacaoRepository;
-import br.com.zup.edu.dojo.extrato.transacao.TransacaoRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -17,7 +17,7 @@ public class Transacao {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    private TipoOperacao operacao;
+    private TipoTransacao tipoTransacao;
 
     @NotNull
     @Positive
@@ -31,26 +31,26 @@ public class Transacao {
     private UUID idCliente;
 
     @NotBlank
-    private String numeroDaConta;
+    private String numeroConta;
 
     @Deprecated
     public Transacao() {
     }
 
-    public Transacao(TipoOperacao operacao, BigDecimal valor, LocalDateTime efetuadaEm, UUID idCliente, String numeroDaConta) {
-        this.operacao = operacao;
+    public Transacao(TipoTransacao tipoTransacao, BigDecimal valor, LocalDateTime efetuadaEm, UUID idCliente, String numeroConta) {
+        this.tipoTransacao = tipoTransacao;
         this.valor = valor;
         this.efetuadaEm = efetuadaEm;
         this.idCliente = idCliente;
-        this.numeroDaConta = numeroDaConta;
+        this.numeroConta = numeroConta;
     }
 
     public Long getId() {
         return id;
     }
 
-    public TipoOperacao getOperacao() {
-        return operacao;
+    public TipoTransacao getTipoTransacao() {
+        return tipoTransacao;
     }
 
     public BigDecimal getValor() {
@@ -65,7 +65,7 @@ public class Transacao {
         return idCliente;
     }
 
-    public String getNumeroDaConta() {
-        return numeroDaConta;
+    public String getNumeroConta() {
+        return numeroConta;
     }
 }
